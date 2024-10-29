@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title><?php echo $v->title; ?></title>
+  <!-- wrapper -->
+  <style media="screen">
+    #wrapper {
+      width: 100%;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    #content-wrapper {
+      width: 100%;
+    }
+  </style>
+  <!-- header -->
+  <style media="screen">
+    .header {
+      background: #f0f0f0;
+    }
+  </style>
+  <!-- content -->
+  <style media="screen">
+    .content {
+      background: #ffffff;
+    }
+  </style>
+  <!-- footer -->
+  <style media="screen">
+    .footer {
+      background: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+<div id="wrapper">
+  <div id="content-wrapper">
+    <div class="header">
+      <h1>Your Blog</h1>
+    </div>
+    <div class="content">
+      <?php echo $v->content; ?>
+      <a href="/">Home</a>
+    </div>
+    <div class="footer">
+      &copy;2024 you
+    </div>
+  </div>
+</div>
+</body>
+</html>
