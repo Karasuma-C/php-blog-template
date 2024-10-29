@@ -1,59 +1,33 @@
-# Name（リポジトリ/プロジェクト/OSSなどの名前）
+# php-blog-template
 
-分かりやすくてカッコイイ名前をつける（今回は"hoge"という名前をつける）
+このプロジェクトは、PHPとMySQLを使用したシンプルなブログシステムです。
 
-"hoge"が何かを簡潔に紹介する
+記事の一覧表示、詳細表示が可能で、HTMLテンプレートを使って柔軟にレイアウトを設定できるようにしています。
 
-# DEMO
+# ファイル詳細
 
-"hoge"の魅力が直感的に伝えわるデモ動画や図解を載せる
+* config.php
 
-# Features
+  データベースの接続情報を定義するファイルです。DB_HOST, DB_USER, DB_PASS, DB_NAMEを設定してください。
 
-"hoge"のセールスポイントや差別化などを説明する
+* system.php
 
-# Requirement
+  カスタムタグ（|p、|h2など）をHTMLタグに変換するための関数 convertText() を定義しています。
 
-"hoge"を動かすのに必要なライブラリなどを列挙する
+* template.class.php
 
-* huga 3.5.2
-* hogehuga 1.0.2
+  テンプレート表示用のクラスです。HTMLテンプレートファイルを読み込み、変数を使用して内容を表示します。
 
-# Installation
+* template/index.tpl.html
 
-Requirementで列挙したライブラリなどのインストール方法を説明する
+  テンプレートファイルです。$v->title と $v->content を利用してページタイトルとコンテンツを表示します。
 
-```bash
-pip install huga_package
-```
+* articles/index.php
 
-# Usage
+  記事の詳細ページを表示するためのファイルです。id パラメータに基づいて記事を取得し、内容を convertText() 関数でHTMLに変換します。
 
-DEMOの実行方法など、"hoge"の基本的な使い方を説明する
+# 注意事項
 
-```bash
-git clone https://github.com/hoge/~
-cd examples
-python demo.py
-```
+* config.php には、データベース接続情報を含めるため、外部に公開する際は注意してください。
 
-# Note
-
-注意点などがあれば書く
-
-# Author
-
-作成情報を列挙する
-
-* 作成者
-* 所属
-* E-mail
-
-# License
-ライセンスを明示する
-
-"hoge" is under [MIT license](https://en.wikipedia.org/wiki/MIT_License).
-
-社内向けなら社外秘であることを明示してる
-
-"hoge" is Confidential.
+* テーブル構造は事前にデータベースで設定が必要です。
