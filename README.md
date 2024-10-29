@@ -1,60 +1,59 @@
-プロジェクト名
-概要
-このプロジェクトは、PHPとMySQLを使用したシンプルなブログシステムです。記事の一覧表示、詳細表示が可能で、HTMLテンプレートを使って柔軟にレイアウトを設定できるようにしています。
+# Name（リポジトリ/プロジェクト/OSSなどの名前）
 
-ディレクトリ構造
-arduino
-コードをコピーする
-/project-root
-├── config.php                 // データベース設定ファイル
-├── system.php                 // 共通システムファイル
-├── convertText.php            // カスタムタグ変換用関数
-├── class/
-│   └── template.class.php     // テンプレートクラス
-├── articles/
-│   └── index.php              // 記事詳細表示用ファイル
-└── template/
-    └── index.tpl.html         // HTMLテンプレートファイル
-ファイル詳細
-config.php
-データベースの接続情報を定義するファイルです。DB_HOST, DB_USER, DB_PASS, DB_NAMEを設定してください。
+分かりやすくてカッコイイ名前をつける（今回は"hoge"という名前をつける）
 
-system.php
-記事一覧ページで使用する共通システムファイルです。データベースから記事のIDとタイトルを取得し、リンク付きで一覧表示します。
+"hoge"が何かを簡潔に紹介する
 
-convertText.php
-カスタムタグ（|p、|h2など）をHTMLタグに変換するための関数 convertText() を定義しています。
+# DEMO
 
-template.class.php
-テンプレート表示用のクラスです。HTMLテンプレートファイルを読み込み、変数を使用して内容を表示します。
+"hoge"の魅力が直感的に伝えわるデモ動画や図解を載せる
 
-articles/index.php
-記事の詳細ページを表示するためのファイルです。id パラメータに基づいて記事を取得し、内容を convertText() 関数でHTMLに変換します。
+# Features
 
-template/index.tpl.html
-テンプレートファイルです。$v->title と $v->content を利用してページタイトルとコンテンツを表示します。
+"hoge"のセールスポイントや差別化などを説明する
 
-インストール方法
-リポジトリをクローン
+# Requirement
 
-bash
-コードをコピーする
-git clone https://github.com/yourusername/yourrepository.git
-データベース設定 config.php 内のデータベース情報を、自分の環境に合わせて設定してください。
+"hoge"を動かすのに必要なライブラリなどを列挙する
 
-データベースの準備 articles テーブルを作成し、id, title, content（および必要ならdate）を含む構造に設定してください。
+* huga 3.5.2
+* hogehuga 1.0.2
 
-サーバー設定 ローカルサーバー（XAMPPやMAMPなど）を立ち上げ、プロジェクトをドキュメントルートに配置してください。
+# Installation
 
-使用方法
-記事一覧ページ
-ブラウザで /system.php にアクセスすると、記事の一覧が表示されます。
+Requirementで列挙したライブラリなどのインストール方法を説明する
 
-記事詳細ページ
-記事タイトルのリンクをクリックすると、該当記事の詳細ページに遷移します。URLには ?q=id というクエリパラメータが付き、指定された記事の内容を表示します。
+```bash
+pip install huga_package
+```
 
-注意事項
-config.php には、データベース接続情報を含めるため、外部に公開する際は注意してください。
-テーブル構造は事前にデータベースで設定が必要です。
-ライセンス
-このプロジェクトのライセンスについては、必要に応じてライセンスを追加してください。
+# Usage
+
+DEMOの実行方法など、"hoge"の基本的な使い方を説明する
+
+```bash
+git clone https://github.com/hoge/~
+cd examples
+python demo.py
+```
+
+# Note
+
+注意点などがあれば書く
+
+# Author
+
+作成情報を列挙する
+
+* 作成者
+* 所属
+* E-mail
+
+# License
+ライセンスを明示する
+
+"hoge" is under [MIT license](https://en.wikipedia.org/wiki/MIT_License).
+
+社内向けなら社外秘であることを明示してる
+
+"hoge" is Confidential.
